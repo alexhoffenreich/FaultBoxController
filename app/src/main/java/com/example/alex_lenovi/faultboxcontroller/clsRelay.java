@@ -29,18 +29,21 @@ public class clsRelay {
     }
 
     public String getONCommand() {
-        clsConnection.getInstance().send("relay/" + relay_num + "/on");
-        return "relay/" + relay_num + "/on";
+        String cmd = "relay/" + relay_num + "/on\n";
+        clsConnection.getInstance().send(cmd);
+        return cmd;
     }
 
     public String getOFFCommand() {
-        clsConnection.getInstance().send("relay/" + relay_num + "/off");
-        return "relay/" + relay_num + "/off";
+        String cmd = "relay/" + relay_num + "/off\n";
+        clsConnection.getInstance().send(cmd);
+        return cmd;
     }
 
     public String getFlickerCommand() {
-        clsConnection.getInstance().send("relay/" + relay_num + "/flicker");
-        return "relay/" + relay_num + "/flicker";
+        String cmd = "relay/" + relay_num + "/flicker\n";
+        clsConnection.getInstance().send(cmd);
+        return cmd;
     }
 
 }
